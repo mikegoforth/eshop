@@ -1,0 +1,200 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.header__search.hide {
+  display: none;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  color: #ff9f00;
+  margin: 0 25px;
+}
+
+.header__logoImage {
+  margin-right: 10px;
+}
+
+.header__logoTitle {
+  text-decoration: none;
+  border: 0;
+  color: #ffffff;
+}
+
+.header__logoTitle {
+  text-decoration: none;
+  border: 0;
+  color: #ffffff;
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+  margin: 0 10px;
+}
+
+.header__searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.header__searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #ff9f00;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.nav__itemLineOne {
+  font-size: 10px;
+}
+
+.nav__itemLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.nav__itemBasket {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+.nav__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header__mobileMenuButton {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    margin-left: 10px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__search {
+    display: none;
+  }
+
+  .header__navMobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #131921;
+    z-index: 99;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .header__navMobile .nav__item {
+    margin: 5px 0;
+  }
+
+  .header__mobileMenuButton {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .header__mobileMenuIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+  }
+
+  /* Basket Mobile */
+  .nav__itemBasket {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+  }
+
+  .nav__basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .header__mobileMenuIconLine {
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+  }
+
+  .header__mobileMenuIconLine:first-child {
+    margin-top: 0;
+  }
+
+  .header__mobileMenuIconLine:last-child {
+    margin-bottom: 0;
+  }
+
+  .header__mobileMenuButton.active .header__mobileMenuIconLine:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .header__mobileMenuButton.active .header__mobileMenuIconLine:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__mobileMenuButton.active .header__mobileMenuIconLine:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
